@@ -7,7 +7,8 @@ main(){
     #allows for multiple  requests to be handled in a single input
     for arg in "$@" #space delimed args
     do 
-        case "$arg" in
+        CaseToLower=("${arg,,}")
+        case "$CaseToLower" in
             "-h" | "help")
             printf "\nYou have asked for help"
             ;;
